@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Login from "../Login"
+import Register from "../Register"
 
 export default function App(){
     return (
@@ -7,6 +8,7 @@ export default function App(){
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Login />}/>
+                    <Route path="/cadastro" element={<Register />}/>
                 </Routes>
             </BrowserRouter>
         </>

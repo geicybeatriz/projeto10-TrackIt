@@ -15,11 +15,12 @@ export const Logo = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+
     gap: 5px;
 
     img{
         width: 180px;
-        height: 100px;
+        height: 95px;
     }
     h1{
         width: 180px;
@@ -88,7 +89,4 @@ export const Anchor = styled.p`
     text-decoration-line: underline;
 
     color: #52B6FF;
-
-    margin-bottom:100px;
-
 `;

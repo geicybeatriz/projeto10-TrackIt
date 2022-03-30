@@ -12,13 +12,12 @@ export default function Login(){
                 </Logo>
     
                 <Form>
-                    <Inputs type="text" placeholder="email"></Inputs>
+                    <Inputs type="email" placeholder="email"></Inputs>
                     <Inputs type="password" placeholder="senha"></Inputs>
                     <Button>Entrar</Button>
                 </Form>
 
                 <Anchor>Não tem uma conta? Cadastre-se!</Anchor>
-
             </Container>
         </>
     )
