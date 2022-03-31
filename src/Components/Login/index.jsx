@@ -17,7 +17,7 @@ export default function Login(){
                     <Button>Entrar</Button>
                 </Form>
 
-                <Anchor>Não tem uma conta? Cadastre-se!</Anchor>
+                <Anchor to="/cadastro">Não tem uma conta? Cadastre-se!</Anchor>
             </Container>
         </>
     )

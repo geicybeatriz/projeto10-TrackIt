@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.main`
     width: 100vw;
@@ -50,7 +51,7 @@ export const Inputs = styled.input`
     width: 303px;
     height: 45px;
 
-    background-color: #FFFFFF;
+    background-color: ${props => props.disabled ? "#F2f2f2" : "#ffffff"};
     border: 1px solid #D5D5D5;
     border-radius: 5px;
 
@@ -59,7 +60,7 @@ export const Inputs = styled.input`
     &::placeholder{
         font-size: 18px;
         line-height: 25px;
-        color: #DBDBDB;
+        color: ${props => props.disabled ? "#dbdbdb" : "#afafaf"}
     }
 `;
 export const Button = styled.button`
@@ -75,9 +76,10 @@ export const Button = styled.button`
     text-align: center;
 
     color: #FFFFFF;
+    ${props => props.disabled && "opacity: 0.7"};
 `;
 
-export const Anchor = styled.p`
+export const Anchor = styled(Link)`
     width: 232px;
 
     font-family: 'Lexend Deca';
