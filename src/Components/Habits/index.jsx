@@ -1,14 +1,24 @@
-import {Container, ContainerHabits} from "./style.jsx";
+import {Container, ContainerHabits, Title, Button, Text} from "./style.jsx";
 import Header from "../Header";
-import Footer from "../Footer/index.jsx";
+import Footer from "../Footer";
+import NewHabit from "../NewHabit";
 
 export default function Habits(){
     return (
         <Container>
             <Header/>
+
             <ContainerHabits>
-                <h1>Aqui</h1>
+                <Title>
+                    <h1>Meus hábitos</h1>
+                    <Button>+</Button>
+                </Title>
+
+                <NewHabit/>
+                
+                <Text>Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!</Text>
             </ContainerHabits>
+
             <Footer/>
         </Container>
 

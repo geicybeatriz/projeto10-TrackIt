@@ -19,8 +19,10 @@ const Bottom = styled.footer`
     z-index: 3;
 
     display: flex;
-    justify-content: space-around;
+    justify-content:center;
     align-items: center;
+
+    gap: 150px;
 
     background-color:#ffffff;
 
@@ -31,6 +33,7 @@ const Bottom = styled.footer`
         font-size: 18px;
         line-height: 22px;
         text-align: center;
+
         color: #52B6FF;
     }
 
