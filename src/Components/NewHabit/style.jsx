@@ -4,7 +4,7 @@ export const ContainerCreate = styled.section`
     width:90%;
     height: 180px;
 
-    display: flex;
+    display: ${props => props.addHabito ? "flex" : "none"};
     flex-direction:column;
     align-items:center;
 

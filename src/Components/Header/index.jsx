@@ -1,11 +1,17 @@
 import styled from "styled-components";
-import userImg from "../../assets/img/Cayde6.jpeg"
+
+//Context API
+import { useContext } from "react";
+import UserContext from "../Context/context.jsx";
 
 export default function Header(){
+    const {apiData} = useContext(UserContext);
+
+
     return (
         <Top>
             <p>TrackIt</p>
-            <img src={userImg} alt="Foto de perfil"/>
+            <img src={apiData.image} alt="Foto de perfil"/>
         </Top>
     );
 }
@@ -33,7 +39,7 @@ const Top = styled.header`
         height: 51px;
 
         border-radius: 50%;
-        background-size: cover;
+        object-fit: cover;
 
     }
     p{

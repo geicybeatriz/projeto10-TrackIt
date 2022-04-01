@@ -6,16 +6,11 @@ import { useNavigate } from "react-router-dom";
 import UserContext from "../Context/context";
 import axios from "axios";
 
-
-
 export default function Login(){
-    const {token, setToken} = useContext(UserContext);
+    const {setApiData} = useContext(UserContext);
     const [userData, setUserData] = useState({email: '', password: ''});
     const [disabled, setDisabled] = useState(false);
     const navigate = useNavigate();
-
-    console.log("token", token);
-
 
     function logInto(e){
         e.preventDefault();
@@ -24,15 +19,14 @@ export default function Login(){
         const URL = "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/login";
         const promise = axios.post(URL,userData);
         promise.then((response) => {console.log(response);
-                                    setToken(response.data.token);
+                                    setApiData(response.data);
                                     navigate('/habitos')});
 
         promise.catch((erro) => {console.log(erro);
                                 alert("Algo deu errado. Tente novamente.");
                                 setDisabled(false);})
     }
-
-
+    
     return (
         <>
             <Container>
