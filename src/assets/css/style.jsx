@@ -75,6 +75,10 @@ export const Button = styled.button`
     line-height: 26px;
     text-align: center;
 
+    display:flex;
+    justify-content:center;
+    align-items: center;
+
     color: #FFFFFF;
     ${props => props.disabled && "opacity: 0.7"};
 `;

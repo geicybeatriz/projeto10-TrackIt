@@ -1,9 +1,9 @@
 import logo from "../../assets/img/logo-trackit.png";
-import loading from "../../assets/img/loading.gif";
 import {Container, Logo, Form, Inputs, Button, Anchor} from "../../assets/css/style.jsx";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ThreeDots } from "react-loader-spinner";
 
 export default function Register(){
     const [data, setData] = useState({email: '', name: '', image: '', password: ''});
@@ -36,7 +36,8 @@ export default function Register(){
                     <Inputs type="password" placeholder="senha" value={data.password} onChange={(e) => setData({...data, password:e.target.value})} disabled={disabled}/>
                     <Inputs type="text" placeholder="nome" value={data.name} onChange={(e) => setData({...data, name:e.target.value})} disabled={disabled}/>
                     <Inputs type="url" placeholder="foto" value={data.image} onChange={(e) => setData({...data, image:e.target.value})} disabled={disabled}/>
-                    <Button type="submit" disabled={disabled}>{!disabled ? "Cadastrar" : <img src={loading} alt="loading" />}</Button>
+                    <Button type="submit" disabled={disabled}>{!disabled ? "Cadastrar" 
+                    : <ThreeDots width="60" height="60" color="white" ariaLabel="loading"/>}</Button>
                 </Form>
                 <Anchor to='/'>Já tem uma conta? Faça login!</Anchor>
             </Container>

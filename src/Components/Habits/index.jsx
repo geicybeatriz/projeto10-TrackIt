@@ -17,15 +17,16 @@ export default function Habits(){
 
     console.log(apiData);
 
-    const config = {headers: {Authorization: `Bearer ${apiData.token}`}};
+    
 
     useEffect(() => {
+        const config = {headers: {Authorization: `Bearer ${apiData.token}`}};
         const URL_HabitsList = "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits";
         const request = axios.get(URL_HabitsList, config);
         request.then(response => { setHabitList(response.data);
                                     console.log("lista hábitos", habitList)});
         request.catch(erro => console.log("erro", erro));
-    }, [habitList]);
+    }, [habitList, apiData.token]);
 
 
     //     const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${idHora}/seats`);

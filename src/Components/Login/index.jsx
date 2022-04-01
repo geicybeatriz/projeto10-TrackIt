@@ -1,10 +1,10 @@
 import logo from "./../../assets/img/logo-trackit.png";
-import loading from "../../assets/img/loading.gif"
-import {Container, Logo, Form, Inputs, Button, Anchor} from "./../../assets/css/style.jsx"
+import {Container, Logo, Form, Inputs, Button, Anchor} from "./../../assets/css/style.jsx";
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../Context/context";
 import axios from "axios";
+import { ThreeDots } from "react-loader-spinner";
 
 export default function Login(){
     const {setApiData} = useContext(UserContext);
@@ -43,7 +43,7 @@ export default function Login(){
                             onChange={(e) => setUserData({...userData, password: e.target.value})} disabled={disabled}/>
 
                     <Button type="submit" disabled={disabled}>
-                        {!disabled ? "Entrar" : <img src={loading} alt="loading" />}
+                        {!disabled ? "Entrar" : <ThreeDots width="60" height="60" color="white" ariaLabel="loading"/>}
                     </Button>
                 </Form>
 
