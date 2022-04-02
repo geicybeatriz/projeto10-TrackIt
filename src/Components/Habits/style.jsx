@@ -35,9 +35,6 @@ export const Title = styled.section`
 
     padding: 0 18px;
 
-    background-color: yellowgreen;
-
-
     h1{
         width: 148px;
         height: 29px;
@@ -75,5 +72,4 @@ export const Text = styled.p`
     padding: 0 18px;
 
     color: #666666;
-    background-color: pink;
 `;

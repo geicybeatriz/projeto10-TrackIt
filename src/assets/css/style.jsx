@@ -56,6 +56,11 @@ export const Inputs = styled.input`
     border-radius: 5px;
 
     padding-left: 11px;
+
+    font-family: 'Lexend Deca';
+    font-weight: 400; 
+    font-size: 18px;
+    line-height: 25px;
     
     &::placeholder{
         font-size: 18px;
