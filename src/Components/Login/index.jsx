@@ -20,7 +20,7 @@ export default function Login(){
         const promise = axios.post(URL,userData);
         promise.then((response) => {console.log(response);
                                     setApiData(response.data);
-                                    navigate('/habitos')});
+                                    navigate('/hoje')});
 
         promise.catch((erro) => {console.log(erro);
                                 alert("Algo deu errado. Tente novamente.");

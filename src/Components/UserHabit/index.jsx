@@ -16,8 +16,6 @@ export default function UserHabit({data, updateHabitsList}){
         request.catch(r => console.log(r));
     }
 
-
-
     return (
         <Container>
             <Div>
