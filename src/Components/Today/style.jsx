@@ -26,13 +26,12 @@ export const Title = styled.h1`
     width: 100%;
     height: 35px;
 
-    margin: 22px 0;
+    margin-top: 28px;
+    padding: 0 18px;
 
     display:flex;
     justify-content: flex-start;
     align-items: center;
-
-    padding: 0 18px;
 
     font-size: 22px;
     line-height: 29px;
@@ -46,5 +45,5 @@ export  const Text =styled.p`
 
     padding: 0 18px;
 
-    color: #666666;
+    color: ${props => props.done ? "#8FC549": "#BABABA"};
 `;

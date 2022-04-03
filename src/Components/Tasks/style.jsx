@@ -22,7 +22,7 @@ export const Div = styled.div`
     justify-content:space-between;
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h3`
     width: 208px;
     height: 25px;
 
@@ -31,12 +31,21 @@ export const Title = styled.h2`
     color: #666666;
 `;
 
-export const Text = styled.p`
+export const Text = styled.div`
     width: 208px;
     height: 16px;
 
-    font-size: 12.976px;
+    font-size: 13px;
     line-height: 16px;
     color: #666666;
+    
+    display:flex;
+    gap: 5px;
+`;
+
+export const Result = styled.p`
+    font-size: 13px;
+    line-height: 16px;
+    color: ${props => (props.done || props.record) ? "#8fc549" :"#666666"};
 
 `;

@@ -9,10 +9,11 @@ import { useState } from "react";
 
 export default function App(){
     const [apiData, setApiData] = useState({});
+    const [progress, setProgress] = useState(0);
 
     return (
         <>
-            <UserContext.Provider value={{apiData, setApiData}}>
+            <UserContext.Provider value={{apiData, setApiData, progress, setProgress}}>
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<Login />}/>
