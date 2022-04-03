@@ -3,16 +3,21 @@ import axios from "axios";
 import Header from "../Header";
 import Footer from "../Footer";
 import AddHabit from "../AddHabit";
+import UserHabit from "../UserHabit/index.jsx";
+import { useNavigate } from "react-router-dom";
 
 //Context API
 import { useContext, useEffect, useState } from "react";
 import UserContext from "../Context/context.jsx";
-import UserHabit from "../UserHabit/index.jsx";
+
 
 export default function Habits(){
     const { apiData } = useContext(UserContext);
     const [habitList, setHabitList] = useState([]);
     const [addHabito, setAddHabito] = useState(false);
+    const navigate = useNavigate();
+
+    useEffect(() => !apiData.token && navigate("/"), [apiData.token, navigate]);
 
     useEffect(() => {
         const config = {headers: {Authorization: `Bearer ${apiData.token}`}};

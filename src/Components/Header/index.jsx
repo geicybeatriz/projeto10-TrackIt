@@ -40,6 +40,7 @@ const Top = styled.header`
 
         border-radius: 50%;
         object-fit: cover;
+        border: 2px solid #FFFFFF;
 
     }
     p{

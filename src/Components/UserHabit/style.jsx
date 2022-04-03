@@ -4,7 +4,6 @@ export const Container = styled.section`
     width:90%;
     height: 91px;
 
-    /* display: ${props => props.addHabito ? "flex" : "none"}; */
     display:flex;
     align-items: left;
     justify-content:space-between;
