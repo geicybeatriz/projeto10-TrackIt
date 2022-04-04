@@ -8,19 +8,19 @@ export const Container = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 `;
 
 export const ContainerHabits = styled.div`
     width: 100%;
-    height: 100vh;
-    padding: 70px 0;
+    margin-top: 200px;
+
+    padding: 200px 0 70px;
 
     display:flex;
     flex-direction: column;
     align-items: center;
 
-    background-color: #e5e5e5;
+    background-color: #e5e5e5; 
 `;
 
 export const Title = styled.section`
@@ -43,7 +43,6 @@ export const Title = styled.section`
         line-height: 29px;
         color: #126BA5;
     }
-
 `;
 
 export const Button = styled.div`

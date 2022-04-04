@@ -12,10 +12,9 @@ export const ContainerTodayPage = styled.main`
 
 export const Container =styled.section`
     width: 100%;
-    height: 100vh - calc(100%-140px);
-    margin-top: 250px;
+    margin-top: 200px;
     
-    padding: 140px 0 70px;
+    padding: 180px 0 70px;
 
     display:flex;
     flex-direction: column;
