@@ -7,19 +7,21 @@ export const ContainerTodayPage = styled.main`
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 `;
 
 export const Container =styled.section`
     width: 100%;
-    height: 100vh;
-    padding: 70px 0;
+    height: 100vh - calc(100%-140px);
+    margin-top: 250px;
+    
+    padding: 140px 0 70px;
 
     display:flex;
     flex-direction: column;
     align-items: center;
 
-    background-color: #e5e5e5;
+    background-color: #e5e5e5; 
 `;
 
 export const Title = styled.h1`
@@ -47,3 +49,4 @@ export  const Text =styled.p`
 
     color: ${props => props.done ? "#8FC549": "#BABABA"};
 `;
+

@@ -21,7 +21,7 @@ export const Logo = styled.section`
 
     img{
         width: 180px;
-        height: 95px;
+        height: 110px;
     }
     h1{
         width: 180px;
@@ -88,7 +88,7 @@ export const Button = styled.button`
     ${props => props.disabled && "opacity: 0.7"};
 `;
 
-export const Anchor = styled(Link)`
+export const Anchor = styled(Link) `
     width: 232px;
 
     font-family: 'Lexend Deca';

@@ -37,14 +37,20 @@ export default function TodayPage(){
 
             <Container>
                 <Title>
-                    {`${(dayjs().format('dd'))[0].toUpperCase()}${(dayjs().format('dddd, DD/MM')).slice(1)}`}
+                    {`${(dayjs().format('dddd'))[0].toUpperCase()}${(dayjs().format('dddd, DD/MM')).slice(1)}`}
                 </Title>
 
                 <Text done={progress !== 0}>
                     {progress !== 0 ? `${progress}%  dos hábitos concluídos` : "Nenhum hábito concluído ainda"}
                 </Text>
-
-                {taskList.map((item, i) => <Tasks key={i} item={item} taskList={taskList} setTaskList={setTaskList} taskDone={taskDone} setTaskDone={setTaskDone}/>)}
+                {taskList.map((item, i) => 
+                    <Tasks  key={i} 
+                            item={item} 
+                            taskList={taskList} 
+                            setTaskList={setTaskList} 
+                            taskDone={taskDone} 
+                            setTaskDone={setTaskDone}/>
+                )}
             </Container>
 
             <Footer />
